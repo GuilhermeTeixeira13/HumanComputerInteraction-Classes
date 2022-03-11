@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="208.0" prefWidth="388.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TrianguloArea.FXMLDocumentController">
+   <children>
+      <TextField fx:id="txfladoA" layoutX="265.0" layoutY="14.0" prefHeight="25.0" prefWidth="108.0" />
+      <Button layoutX="265.0" layoutY="130.0" mnemonicParsing="false" onAction="#actionCalcular" prefHeight="25.0" prefWidth="108.0" text="Calcular" />
+      <Text fill="#fbff00" layoutX="221.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a = ?">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Text>
+      <TextField fx:id="txfladoB" layoutX="265.0" layoutY="50.0" prefHeight="25.0" prefWidth="108.0" />
+      <Text fill="#fbff00" layoutX="220.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="b = ?">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Text>
+      <Text fill="#fbff00" layoutX="221.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="c = ?" wrappingWidth="50.55403137207031">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Text>
+      <TextField fx:id="txfladoC" layoutX="265.0" layoutY="91.0" prefHeight="25.0" prefWidth="108.0" />
+      <TextField fx:id="txfarea" alignment="CENTER_RIGHT" editable="false" layoutX="265.0" layoutY="168.0" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: rgb(27,0,0); -fx-text-fill: green;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Text fill="#fbff00" layoutX="210.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Área = " wrappingWidth="72.69123840332031">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

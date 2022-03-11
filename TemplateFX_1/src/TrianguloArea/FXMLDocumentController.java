@@ -1,4 +1,4 @@
-package AreaTriangulo;
+package TrianguloArea;
 
 import pt.ubi.*;
 import java.net.URL;
@@ -20,16 +20,17 @@ public class FXMLDocumentController implements Initializable {
      * Initializes the controller class.
      */
     @FXML
-    TextField txfladoA;
+    private TextField txfladoA;
     
     @FXML
-    TextField txfladoB;
+    private TextField txfladoB;
     
     @FXML
-    TextField txfladoC;
+    private TextField txfladoC;
     
     @FXML
     public void actionCalcular(ActionEvent e){
+        System.out.println("teste");
         double a = Double.parseDouble(txfladoA.getText());
         double b = Double.parseDouble(txfladoB.getText());
         double c = Double.parseDouble(txfladoC.getText().replace(",","."));

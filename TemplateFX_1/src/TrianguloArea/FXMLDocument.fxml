@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="208.0" prefWidth="388.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RegistoAlunosUBI.FXMLDocumentController">
+   <children>
+      <TextField fx:id="txfladoA" layoutX="80.0" layoutY="36.0" prefHeight="25.0" prefWidth="293.0" />
+      <Button layoutX="119.0" layoutY="135.0" mnemonicParsing="false" onAction="#actionCalcular" text="Calcular" />
+      <Text layoutX="27.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a" />
+      <TextField fx:id="txfladoB" layoutX="80.0" layoutY="78.0" prefHeight="25.0" prefWidth="77.0" />
+      <Text layoutX="27.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="b" />
+      <Text layoutX="178.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="c" wrappingWidth="35.220703125" />
+      <TextField fx:id="txfladoC" layoutX="223.0" layoutY="79.0" />
+   </children>
+</AnchorPane>

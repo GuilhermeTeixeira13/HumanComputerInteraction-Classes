@@ -20,17 +20,15 @@ public class FXMLDocumentController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    @FXML
-    TextField txfNome;
     
     @FXML
-    TextField txfCurso;
-    
+    private TextField txfNome;
     @FXML
-    TextField txfNum;
+    private TextField txfCurso;
+    @FXML
+    private TextField txfNum;
    
     
-    @FXML
     public void actionRegistar(ActionEvent e){
         String nome = txfNome.getText();
         String curso = txfCurso.getText();
@@ -38,7 +36,6 @@ public class FXMLDocumentController implements Initializable {
         System.out.println("Nome:"+nome+" / Curso:"+curso+" / Núm:"+num);
     }
     
-    @FXML
     public void actionCancelar(ActionEvent e){
         System.out.println("Terminou o programa.");
         exit();
@@ -48,6 +45,10 @@ public class FXMLDocumentController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     } 
+
+    @FXML
+    private void actionCalcular(ActionEvent event) {
+    }
    
     
 }
