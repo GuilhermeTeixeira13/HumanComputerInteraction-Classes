@@ -16,10 +16,11 @@ import javafx.scene.control.TextArea;
  *
  * @author jpc
  */
+
 public class FXMLDocumentController implements Initializable {
     
     private static final DecimalFormat df = new DecimalFormat("0.0000");
-    private static final DecimalFormat df2 = new DecimalFormat("0.0");    
+    private static final DecimalFormat df2 = new DecimalFormat("0.0"); 
 
     /**
      * Initializes the controller class.
@@ -37,30 +38,47 @@ public class FXMLDocumentController implements Initializable {
     TextField txfarea;
     
     @FXML
-    TextArea ta;
-    
-    @FXML
-    public void actionCalcular(ActionEvent e){
-        double a = Double.parseDouble(txfladoA.getText());
-        double b = Double.parseDouble(txfladoB.getText());
+    public void actionCalcular(ActionEvent e){ 
+        double a = Double.parseDouble(txfladoA.getText());     
+        double b = Double.parseDouble(txfladoB.getText());   
         double c = Double.parseDouble(txfladoC.getText().replace(",","."));
         
-        double somaABC = a + b + c;
-        double ABCdivididoPor2 = somaABC / 2;
+        boolean calcular = true;
         
-        double area = Math.sqrt((ABCdivididoPor2)*(ABCdivididoPor2-a)*(ABCdivididoPor2-b)*(ABCdivididoPor2-c));
+        if(a>b+c){
+            txfladoA.setText("ERRO: a>b+c");
+            txfladoA.requestFocus();
+            calcular = false;
+        }
+        if(b>c+a){
+            txfladoB.setText("ERRO: b>c+a");
+            txfladoB.requestFocus();
+            calcular = false;
+        }
+        if(c>a+b){
+            txfladoC.setText("ERRO: c>a+b");
+            txfladoC.requestFocus();
+            calcular = false;
+        }
         
-        System.out.println("a="+a+"\nb="+b+"\nc="+c+"\narea="+area);
-        
-        txfarea.setText(String.valueOf(df.format(area)));
-        txfarea.setEditable(false);
-        
-        ta.setText("s = ("+df2.format(a)+"+"+df2.format(b)+"+"+df2.format(c)+") / 2\n   = "+df2.format(somaABC)+" / 2\n   = "+df2.format(ABCdivididoPor2)+"\n\nA =  "+"√("+df2.format(ABCdivididoPor2)+"x"+"("+df2.format(ABCdivididoPor2)+"x"+df2.format(a)+") x ("+df2.format(ABCdivididoPor2)+"-"+df2.format(b)+") x ("+df2.format(ABCdivididoPor2)+"-"+df2.format(c)+"))\n   = √("+df2.format(ABCdivididoPor2)+"x"+df2.format(ABCdivididoPor2*a)+"x"+df2.format(ABCdivididoPor2*b)+"x"+df2.format(ABCdivididoPor2*c)+")\n   = √"+df2.format(area*area)+"\n   = "+df2.format(area)+"cm²");
+        if(calcular == true){
+            double somaABC = a + b + c;
+            double ABCdivididoPor2 = somaABC / 2;
+            double area = Math.sqrt((ABCdivididoPor2)*(ABCdivididoPor2-a)*(ABCdivididoPor2-b)*(ABCdivididoPor2-c));
+            System.out.println("\n\nA="+a+"\nB="+b+"\nC="+c+"\n\nÁrea="+area);
+            txfarea.setText(String.valueOf(df.format(area)));
+            txfarea.setEditable(false);
+        }
+        else{
+            txfarea.setText("Erro!");
+            txfarea.setEditable(false);
+        }       
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
 }
+
+
