@@ -17,11 +17,11 @@ import javafx.scene.control.TextField;
 public class FXMLDocumentController implements Initializable {
 
     @FXML
-    private TextField texto;
+    private TextField txftexto;
     @FXML
-    private TextField palavra;
+    private TextField txfpalavra;
     @FXML
-    private TextField numVezesAparece;
+    private TextField txfnumVezesAparece;
     @FXML
     private CheckBox maiusculas;
 
@@ -30,8 +30,35 @@ public class FXMLDocumentController implements Initializable {
      */
     @FXML
     public void actionContar(ActionEvent e){
-        if(maiusculas.isSelected())
-            System.out.println("selecionada");
+        String texto = txftexto.getText();
+        String palavraProcurada = txfpalavra.getText();
+        String[] palavrasTexto;
+        int cont;
+        
+        if(maiusculas.isSelected()){
+            String textoUC = texto.toUpperCase();
+            String palavraProcuradaUC = palavraProcurada.toUpperCase();
+            palavrasTexto = textoUC.split("\\W+");
+            cont=0;
+            
+            for(int i=0; i<palavrasTexto.length; i++){
+                System.out.println("Palavra->"+palavrasTexto[i]+"/Procurada->"+palavraProcuradaUC);
+                if(palavrasTexto[i].equals(palavraProcuradaUC))
+                    cont++;
+            }
+            
+            txfnumVezesAparece.setText(String.valueOf(cont));
+        }
+        else{
+            palavrasTexto = texto.split("\\W+");
+            cont = 0;
+            for(int i=0; i<palavrasTexto.length; i++){
+                System.out.println("Palavra->"+palavrasTexto[i]+"/Procurada->"+palavraProcurada);
+                if(palavrasTexto[i].equals(palavraProcurada))
+                    cont++;
+            }
+            txfnumVezesAparece.setText(String.valueOf(cont));
+        }
     }
     
     @Override
