@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 /**
@@ -17,7 +18,7 @@ import javafx.scene.control.TextField;
 public class FXMLDocumentController implements Initializable {
 
     @FXML
-    private TextField txftexto;
+    private TextArea txAreatexto;
     @FXML
     private TextField txfpalavra;
     @FXML
@@ -30,40 +31,45 @@ public class FXMLDocumentController implements Initializable {
      */
     @FXML
     public void actionContar(ActionEvent e){
-        String texto = txftexto.getText();
+        String texto = txAreatexto.getText();
         String palavraProcurada = txfpalavra.getText();
-        String[] palavrasTexto;
-        int cont;
+        int num = 0;
+        
+        System.out.print("Encontrou a palavra '");
         
         if(maiusculas.isSelected()){
             String textoUC = texto.toUpperCase();
             String palavraProcuradaUC = palavraProcurada.toUpperCase();
-            palavrasTexto = textoUC.split("\\W+");
-            cont=0;
             
-            for(int i=0; i<palavrasTexto.length; i++){
-                System.out.println("Palavra->"+palavrasTexto[i]+"/Procurada->"+palavraProcuradaUC);
-                if(palavrasTexto[i].equals(palavraProcuradaUC))
-                    cont++;
-            }
+            num = FXMLDocumentController.contaPalavraNumTexto(textoUC, palavraProcuradaUC);
             
-            txfnumVezesAparece.setText(String.valueOf(cont));
+            txfnumVezesAparece.setText(String.valueOf(num));
+            
+            System.out.print(palavraProcuradaUC);
         }
         else{
-            palavrasTexto = texto.split("\\W+");
-            cont = 0;
-            for(int i=0; i<palavrasTexto.length; i++){
-                System.out.println("Palavra->"+palavrasTexto[i]+"/Procurada->"+palavraProcurada);
-                if(palavrasTexto[i].equals(palavraProcurada))
-                    cont++;
-            }
-            txfnumVezesAparece.setText(String.valueOf(cont));
+            num = FXMLDocumentController.contaPalavraNumTexto(texto, palavraProcurada);
+            txfnumVezesAparece.setText(String.valueOf(num));
+            
+            System.out.print(palavraProcurada);
         }
+        System.out.print("' "+num+" vezes.\n\n");
+    }
+    
+    public static int contaPalavraNumTexto(String texto, String palavraProcurada){
+        int cont = 0;
+        String[] palavrasTexto = texto.split("\\W+");
+        
+        for(int i=0; i<palavrasTexto.length; i++){
+            if(palavrasTexto[i].equals(palavraProcurada))
+                cont++;
+        }
+        
+        return cont;
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
     }    
-
 }

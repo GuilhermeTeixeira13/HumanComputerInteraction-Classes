@@ -18,6 +18,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
         Scene scene = new Scene(root);
+        scene.getStylesheets().add("fxmlview.css");
         
         stage.setTitle("Bloco de Texto");
         stage.setScene(scene);

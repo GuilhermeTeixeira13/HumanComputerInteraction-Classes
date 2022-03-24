@@ -32,28 +32,49 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Slider sliderBlue;
     @FXML
-    private Label LabelResVermelho;
+    private Label LabelResRed;
     @FXML
     private Label LabelResGreen;
     @FXML
     private Label LabelResBlue; 
     @FXML
     private Pane painel;
-  
+    
+    private Double blue = 0.0;
+    private Double red = 0.0;
+    private Double green = 0.0;
     
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        double azul = sliderBlue.getValue();
-        System.out.println(azul);   
         
         sliderBlue.valueProperty().addListener(new ChangeListener<Number>(){
             @Override
             public void changed(ObservableValue<? extends Number> agr0, Number arg1, Number agr2) {
-                double azul = sliderBlue.getValue();
-                painel.setStyle("-fx-background-color: rgb(" + 0 + "," + 0 + ", " + (int)azul + ");");
+                blue = sliderBlue.getValue();
+                LabelResBlue.setText(Integer.toString((int) ((double)blue))+" "+Integer.toHexString((int) ((double)blue)).toUpperCase());
+                painel.setStyle("-fx-background-color: rgb(" + (int)((double)red) + "," + (int)((double)green) + ", " + (int)((double)blue) + ");");
+                LabelResBlue.setStyle("-fx-background-color: rgb(" + 0 + "," + 0 + ", " + (int)((double)blue) + ");");
+            }
+        });
+        sliderGreen.valueProperty().addListener(new ChangeListener<Number>(){
+            @Override
+            public void changed(ObservableValue<? extends Number> agr0, Number arg1, Number agr2) {
+                green = sliderGreen.getValue();   
+                LabelResGreen.setText(Integer.toString((int) ((double)green))+" "+Integer.toHexString((int) ((double)green)).toUpperCase());
+                painel.setStyle("-fx-background-color: rgb(" + (int)((double)red) + "," + (int)((double)green) + ", " + (int)((double)blue) + ");");
+                LabelResGreen.setStyle("-fx-background-color: rgb(" + 0 + "," + (int)((double)green) + ", " + 0 + ");");
+            }
+        });
+        sliderRed.valueProperty().addListener(new ChangeListener<Number>(){
+            @Override
+            public void changed(ObservableValue<? extends Number> agr0, Number arg1, Number agr2) {
+                red = sliderRed.getValue();
+                LabelResRed.setText(Integer.toString((int) ((double)red))+" "+Integer.toHexString((int) ((double)red)).toUpperCase());
+                painel.setStyle("-fx-background-color: rgb(" + (int)((double)red) + "," + (int)((double)green) + ", " + (int)((double)blue) + ");");
+                LabelResRed.setStyle("-fx-background-color: rgb(" + (int)((double)red) + "," + 0 + ", " + 0 + ");");
             }
         });
     }       
