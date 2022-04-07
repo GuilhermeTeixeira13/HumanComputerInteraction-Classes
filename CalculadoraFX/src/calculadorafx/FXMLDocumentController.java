@@ -68,6 +68,7 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         registadora = new Registadora();
+        svalor = new StringBuilder();
     }    
 
     @FXML
@@ -80,32 +81,73 @@ public class FXMLDocumentController implements Initializable {
     }
     
     public void process(char c){
-        if(c == '+' || c == '-' || c == 'x' || c == '/')
-            processOperadores(c);
-        else if(c == 'c')
-            processReset(c);
+        if(c == '+' || c == '-' || c == 'x' || c == '/'){
+            if(!svalor.isEmpty())
+                processOperadores(c);
+        }
+        else if(c == 'C')
+            processReset();
         else if (Character.isDigit(c))
-           processDigito(c);
+                processDigito(c);
+        else if (c == 'R'){
+            if(!svalor.isEmpty())
+                processResultado();
+        }
+        else if (c == '.'){
+            if(!contemPonto(svalor)){
+                svalor.append('.');
+                textoTxtArea.appendText(".");
+            }
+        }
     }
     
     public void processOperadores(char c){
         double num;  
-        registadora.defineOperador(c);
+        
         num = Double.parseDouble(svalor.toString());
         registadora.regista(num); 
         
-        svalor.append(" "+c+"\n");
-        textoTxtArea.appendText(svalor.toString());
+        if(c == '+')
+            registadora.defineOperador('+');
+        else if(c == '-')
+            registadora.defineOperador('-');
+        else if(c == 'x')
+            registadora.defineOperador('x');
+        else if(c == '/')
+            registadora.defineOperador('/');
         
-        svalor.delete(0, svalor.length()-1);
+        textoTxtArea.appendText(" "+c+"\n");
+        
+        resultadoLabel.setText(String.valueOf(registadora.getResultado()));
+        svalor.setLength(0);
     }
     
-    public void processReset(char c){
-        svalor.delete(0, svalor.length()-1);
-        textoTxtArea.setText("");
+    public void processReset(){
+        registadora = new Registadora();
+        svalor.setLength(0);
+        //textoTxtArea.clear();
+        resultadoLabel.setText("");
     }
     
     public void processDigito(char c){
-        svalor.append(c); // ERRO
+        svalor.append(c);
+        textoTxtArea.appendText(String.valueOf(c));
+    }
+    
+    public void processResultado(){
+        double num = Double.parseDouble(svalor.toString());
+        registadora.regista(num); 
+        
+        resultadoLabel.setText(String.valueOf(registadora.getResultado()));
+        textoTxtArea.appendText("\n-------------------\nResultado: "+String.valueOf(registadora.getResultado())+"\n-------------------\n");
+        processReset();
+    }
+    
+    public boolean contemPonto(StringBuilder n) {
+        for(int i = 0; i < n.length(); i++){
+            if(n.charAt(i) == '.')
+                return true;
+        }
+        return false;
     }
 }

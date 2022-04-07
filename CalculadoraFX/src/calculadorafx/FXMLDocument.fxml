@@ -117,7 +117,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="buttonReset" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="73.0" style="-fx-background-color: rgb(250,250,210); -fx-border-color: rgb(171,171,171);" text="C" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                        <Button fx:id="buttonReset" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="72.0" prefWidth="73.0" style="-fx-background-color: rgb(250,250,210); -fx-border-color: rgb(171,171,171);" text="C" GridPane.columnIndex="2" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
