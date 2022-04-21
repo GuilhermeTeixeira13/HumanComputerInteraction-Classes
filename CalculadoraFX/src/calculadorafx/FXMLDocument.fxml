@@ -42,82 +42,82 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="button7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="71.0" prefWidth="148.0" text="7">
+                        <Button fx:id="button7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="71.0" prefWidth="148.0" text="7">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="button8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="71.0" prefWidth="186.0" text="8" GridPane.columnIndex="1">
+                        <Button fx:id="button8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="71.0" prefWidth="186.0" text="8" GridPane.columnIndex="1">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="button9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="72.0" prefWidth="73.0" text="9" GridPane.columnIndex="2">
+                        <Button fx:id="button9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="72.0" prefWidth="73.0" text="9" GridPane.columnIndex="2">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="buttonAdd" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="72.0" prefWidth="73.0" style="-fx-background-color: rgb(255,228,196); -fx-border-color: rgb(171,171,171);" text="+" GridPane.columnIndex="3">
+                        <Button fx:id="buttonAdd" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="72.0" prefWidth="73.0" style="-fx-background-color: rgb(255,228,196); -fx-border-color: rgb(171,171,171);" text="+" GridPane.columnIndex="3">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="button4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="71.0" prefWidth="149.0" text="4" GridPane.rowIndex="1">
+                        <Button fx:id="button4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="71.0" prefWidth="149.0" text="4" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="button5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="71.0" prefWidth="223.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Button fx:id="button5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="71.0" prefWidth="223.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="button1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="71.0" prefWidth="176.0" text="1" GridPane.rowIndex="2">
+                        <Button fx:id="button1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="71.0" prefWidth="176.0" text="1" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="button6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="72.0" prefWidth="73.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <Button fx:id="button6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="72.0" prefWidth="73.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="buttonMinus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="72.0" prefWidth="73.0" style="-fx-background-color: rgb(255,228,196); -fx-border-color: rgb(171,171,171);" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <Button fx:id="buttonMinus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="72.0" prefWidth="73.0" style="-fx-background-color: rgb(255,228,196); -fx-border-color: rgb(171,171,171);" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="button2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="71.0" prefWidth="190.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <Button fx:id="button2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="71.0" prefWidth="190.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="button3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="72.0" prefWidth="73.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                        <Button fx:id="button3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="72.0" prefWidth="73.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="buttonMult" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="72.0" prefWidth="73.0" style="-fx-background-color: rgb(255,228,196); -fx-border-color: rgb(171,171,171);" text="x" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                        <Button fx:id="buttonMult" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="72.0" prefWidth="73.0" style="-fx-background-color: rgb(255,228,196); -fx-border-color: rgb(171,171,171);" text="x" GridPane.columnIndex="3" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="buttonPonto" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="72.0" prefWidth="73.0" style="-fx-background-color: rgb(204,204,204); -fx-border-color: rgb(171,171,171);" text="." GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <Button fx:id="buttonPonto" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="72.0" prefWidth="73.0" style="-fx-background-color: rgb(204,204,204); -fx-border-color: rgb(171,171,171);" text="." GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="button0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="71.0" prefWidth="180.0" text="0" GridPane.rowIndex="3">
+                        <Button fx:id="button0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="71.0" prefWidth="180.0" text="0" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="buttonDiv" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="72.0" prefWidth="73.0" style="-fx-background-color: rgb(255,228,196); -fx-border-color: rgb(171,171,171);" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                        <Button fx:id="buttonDiv" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="72.0" prefWidth="73.0" style="-fx-background-color: rgb(255,228,196); -fx-border-color: rgb(171,171,171);" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="buttonReset" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="72.0" prefWidth="73.0" style="-fx-background-color: rgb(250,250,210); -fx-border-color: rgb(171,171,171);" text="C" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                        <Button fx:id="buttonReset" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" onKeyTyped="#handleKeyTyped" prefHeight="72.0" prefWidth="73.0" style="-fx-background-color: rgb(250,250,210); -fx-border-color: rgb(171,171,171);" text="C" GridPane.columnIndex="2" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
