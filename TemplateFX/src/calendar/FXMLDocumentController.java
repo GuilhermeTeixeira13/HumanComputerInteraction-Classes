@@ -84,6 +84,6 @@ public class FXMLDocumentController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         int ano = (Integer)spnYear.getValue();
         int mes = cmbMes.getSelectionModel().getSelectedIndex();
-        escreverMes(ano, mes);
+        //escreverMes(ano, mes);
     }
 }
