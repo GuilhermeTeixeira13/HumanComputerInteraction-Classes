@@ -1,12 +1,11 @@
 package calendar;
 
-import pt.ubi.*;
+import java.lang.reflect.Field;
 import java.net.URL;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Locale;
-import static java.util.Locale.ENGLISH;
 import java.util.ResourceBundle;
-import java.util.TimeZone;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,7 +13,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
-import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
@@ -84,6 +82,38 @@ public class FXMLDocumentController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         int ano = (Integer)spnYear.getValue();
         int mes = cmbMes.getSelectionModel().getSelectedIndex();
-        //escreverMes(ano, mes);
+        escreverMes(ano, mes);
+    }
+    
+    private void escreverMes(int ano, int mes){
+        Calendar primeiro = new GregorianCalendar(ano, mes, 1);
+        int diaSemana = primeiro.get(Calendar.DAY_OF_WEEK);
+        diaSemana = (12+diaSemana)%7 + 1;
+        int maxMes = primeiro.getActualMaximum(Calendar.DATE);
+        
+        for(Field f : getClass().getDeclaredFields()){
+            if(f.getName().startsWith("dia")){
+                try {
+                    Label label = (Label) f.get(this);
+                    int id = Integer.parseInt(f.getName().substring(3));
+                    int dt = id - diaSemana + 1;
+                    
+                    if( dt <= 0 || dt > maxMes){
+                        label.setText("");
+                        label.setStyle("-fx-background-color: #F4F4F4;" + 
+                        "-fx-border-color: #F4F4F4;");
+                    }
+                    else{
+                        label.setStyle("-fx-background-color: white;" + 
+                        "-fx-border-color: gray;");
+                        label.setText(""+dt);
+                    }
+                }
+                catch(Exception ex){
+                    
+                }
+            }
+        }
+        
     }
 }
